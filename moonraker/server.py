@@ -702,6 +702,9 @@ def main(from_package: bool = True) -> None:
     app_args["uvloop_enabled"] = EventLoop.UVLOOP_ENABLED
     log_manager = LogManager(app_args, startup_warnings)
 
+    logging.info("[MICHAL MICHAL MICHAL MICHAL MICHAL] data path: {data_path}")
+    print("[MICHAL MICHAL MICHAL MICHAL MICHAL] data path: {data_path}")
+
     # Start asyncio event loop and server
     while True:
         estatus = asyncio.run(launch_server(log_manager, app_args))
